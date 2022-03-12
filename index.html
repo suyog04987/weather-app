@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    
+
+</head>
+<body>
+        <div class="container">
+            <div class="header">Weather App</div>
+            <section class="input-part">
+                <p>Enter a valid city name</p>
+                <input type="text" placeholder="City Name" spellcheck="false">
+                <div class="diveder"></div>
+                <button id="myBtn">Get a Device Location</button>
+            </section>
+        
+        <section class="main">
+            <div class="temp">
+                <span id="numb"><b>21</b></span><span class="deg">°</span>C
+            </div>
+            <div id="climate">Moderate Rain</div>
+            <div class="place">
+                <i class="bx bx-map"></i>
+                <span id="loc">Kathmandu, Nepal</span>
+            </div>
+            <div class="column">
+                <div class="column-feels">
+                    <i class="bx bxs-thermometer"></i>
+                    <div class="details">
+                        <div class="temp">
+                            <span class="numb-2"><b>23</b></span><span class="deg">°</span>C
+                        </div>
+                        <p1>Feels like</p1>
+                    </div>
+                </div>
+                <div class="column-humidity">
+                    <i class="bx bxs-droplet-half"></i>
+                    <div class="details">
+                        <span class="numb-3">93%</span>
+                        <p2>Humidity</p2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+        $('#numb').empty();
+
+        })
+</script>
+    
+    
+</body>
+</html>

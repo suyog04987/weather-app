@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background: #31aee7;
+}
+
+.container {
+  width: 400px;
+  border-radius: 10px;
+  background: rgb(245, 247, 248);
+}
+
+.header {
+  color: rgb(49, 62, 243);
+  font-size: 28px;
+  font-weight: 600;
+  padding: 16px 15px;
+  text-align: center;
+  display: flex;
+  border-bottom: 2px solid black;
+}
+section.input-part {
+  margin: 20px 25px 30px;
+}
+
+.input-part :where(input, button) {
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+}
+p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.diveder {
+  width: 100%;
+  height: 0px;
+  margin: 20px 0;
+  background: rgb(139, 138, 138);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.diveder::before {
+  content: "OR";
+  color: black;
+}
+
+button {
+  font-size: 20px;
+  background: #4646db;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* .main {
+  display: none;
+}  */
+
+.temp {
+  font-size: 30px;
+  text-align: center;
+}
+
+#climate {
+  /* text-align: center; */
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.place {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.column {
+  margin: 20px;
+  border-top: 2px solid #0707a6;
+  justify-content: space-between;
+  display: flex;
+  font-size: 22px;
+  margin-bottom: 21px;
+  padding: 14px;
+}
+
+.column-feels {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.column-humidity {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+i.bx.bxs-thermometer {
+  color: blue;
+  font-size: 37px;
+}
+
+i.bx.bxs-droplet-half {
+  font-size: 37px;
+  color: blue;
+}
