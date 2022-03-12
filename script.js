@@ -1,7 +1,5 @@
 
 
-window.addEventListener("load", () => {
-
 
 let long;
 let lat;
@@ -12,7 +10,10 @@ let lat;
         console.log(long);
         console.log(lat);
         const api= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=b34af01c8dbd09022bb8e7349ed62a82`;
-        fetch (api)
+        var myEl = document.getElementById('myBtn');
+
+myEl.addEventListener('click', function() {
+     fetch (api)
         .then((response) => {
             return response.json();
         })
@@ -26,6 +27,7 @@ let lat;
             $('#loc').append(name.name);
             $('#numb').empty();
             $('#numb').append(Math.floor(temp.temp-276));
+}, false);
             
 
 
@@ -50,7 +52,6 @@ let lat;
 
 }
 
-})
             
 
             
