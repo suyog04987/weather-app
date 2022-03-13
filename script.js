@@ -9,7 +9,7 @@ let lat;
         lat= position.coords.latitude;
         console.log(long);
         console.log(lat);
-        const api= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=b34af01c8dbd09022bb8e7349ed62a82`;
+         api= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=b34af01c8dbd09022bb8e7349ed62a82`;
         var myEl = document.getElementById('myBtn');
 
 myEl.addEventListener('click', function() {
@@ -21,27 +21,25 @@ myEl.addEventListener('click', function() {
             console.log(data);
             const name = data;
             const temp = data.main;
-            const {description} = data.weather[0];
-            const{feels_like, humidity } = data.main;
+            const description = data.weather[0];
+            const feels =data.main.feels_like;
+            const hum = data.main.humidity;
             $('#loc').empty();
             $('#loc').append(name.name);
             $('#numb').empty();
             $('#numb').append(Math.floor(temp.temp-276));
-}, false);
+            $('#climate').empty();
+            $('#climate').append(description.description);
+            let haha=document.getElementById('numb-2');
+            haha.innerHTML=Math.floor(feels-276);
+            let hehe = document.querySelector('.numb-3');
+            hehe.innerHTML=hum;
+
+            document.querySelector('.main').style.display="block";
             
 
 
-
-            
-
-            
-
-
-            
-            
-
-           
-           
+}, false);         
             
 
             
@@ -51,9 +49,12 @@ myEl.addEventListener('click', function() {
 
 
 }
-
-            
-
-            
-
-            
+/*let city;
+let cityapi = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b34af01c8dbd09022bb8e7349ed62a82`
+*/
+inputField = document.getElementById('#input');
+inputField.addEventListener("keyup", e => {
+    if (e.key == "Enter" && inputField.value !=""){
+        console.log("hello")
+    }
+})
