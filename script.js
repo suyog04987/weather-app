@@ -9,11 +9,11 @@ let lat;
         lat= position.coords.latitude;
         console.log(long);
         console.log(lat);
-         api= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=b34af01c8dbd09022bb8e7349ed62a82`;
+         aapi= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=b34af01c8dbd09022bb8e7349ed62a82`;
         var myEl = document.getElementById('myBtn');
 
 myEl.addEventListener('click', function() {
-     fetch (api)
+     fetch (aapi)
         .then((response) => {
             return response.json();
         })
@@ -49,13 +49,27 @@ myEl.addEventListener('click', function() {
 
 
 }
-/*let city;
-let cityapi = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b34af01c8dbd09022bb8e7349ed62a82`
-*/
-inputField = document.getElementById('#input');
+
+inputField = document.getElementById('input');
 inputField.addEventListener("keyup", e => {
     if (e.key == "Enter" && inputField.value !=""){
-        console.log("hello")
+       // console.log("hello")
+       requestApi(inputField.value);
     }
 })
+
+const requestApi = city =>{
+    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b34af01c8dbd09022bb8e7349ed62a82`;
+    fetch(api)
+    .then((response) => {
+        return response.json();
+    })
+
+    .then(result => {
+        console.log(result)
+    
+})
+}
+
+
 
