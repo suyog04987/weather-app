@@ -59,5 +59,3 @@ inputField.addEventListener("keyup", e => {
     }
 })
 
-HashChangeEvent{jfjkdfh
-}
