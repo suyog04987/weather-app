@@ -57,7 +57,6 @@ inputField.addEventListener("keyup", e => {
        requestApi(inputField.value);
     }
 })
-<<<<<<< HEAD
 
 const requestApi = city =>{
     api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b34af01c8dbd09022bb8e7349ed62a82`;
@@ -71,8 +70,3 @@ const requestApi = city =>{
     
 })
 }
-
-
-
-=======
->>>>>>> be359d2707334bfdb533d2e26e02078ca6fbb370
