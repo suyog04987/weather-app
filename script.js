@@ -58,4 +58,3 @@ inputField.addEventListener("keyup", e => {
         console.log("hello")
     }
 })
-
