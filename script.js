@@ -67,6 +67,26 @@ const requestApi = city =>{
 
     .then(result => {
         console.log(result)
+         const city = result;
+            const temp1 = result.main;
+            const description1 = result.weather[0];
+            const feels1 =result.main.feels_like;
+            const hum1 = result.main.humidity;
+            $('#loc').empty();
+            $('#loc').append(city.name);
+            $('#numb').empty();
+            $('#numb').append(Math.floor(temp1.temp-276));
+            $('#climate').empty();
+            $('#climate').append(description1.description);
+            let haha=document.getElementById('numb-2');
+            haha.innerHTML=Math.floor(feels1-276);
+            let hehe = document.querySelector('.numb-3');
+            hehe.innerHTML=hum1;
+
+            document.querySelector('.main').style.display="block";
+            document.querySelector('.input-part').style.display = "none";
+        
+
     
 })
 }
